@@ -44,9 +44,13 @@ document.querySelector("#mute").addEventListener("click", function() {
 });
 document.querySelector("#slider").addEventListener("click", function() {
 	video.volume = this.value / 100;
-	document.querySelector("#volume").innerHTML = (video.volume*100+"%");
+	document.querySelector("#volume").innerHTML = (video.volume* 100 +"%");
 	console. log("Current volume", video.volume);
 });
+document.querySelector("#play").addEventListener("click", function() {
+	document.querySelector("#volume").innerHTML = (video.volume* 100 +"%");
+});
+
 document.querySelector("#vintage").addEventListener("click", function() {
 	console.log("Old school");
 	video.classList.add("oldSchool");
